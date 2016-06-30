@@ -167,6 +167,12 @@ namespace iTextSharp.text.pdf {
                         }
                     }
                 }
+                else {
+                    if(PdfName.TYPE0.Equals(subType)) {
+                        isType0 = true;
+                        ProcessType0(font);
+                    }
+                }
             }
         }
 
